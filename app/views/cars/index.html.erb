@@ -1,0 +1,19 @@
+<div class="container py-5">
+  <div class="row">
+    <div class="col-12 ">
+      <div class="bg-white rounded p-3 shadow">
+        <h1>Tous nos voitures de locations</h1>
+        <%= link_to "Add a new car", new_car_path %>
+        <br>
+        <% @cars.each do |car| %>
+          <h3><%= car.brand %></h3>
+          <p><%= car.model %></p>
+          <p><%= car.year %></p>
+          <p><%= car.address %></p>
+          <p><%= car.price %></p>
+          <%= link_to "Aller voir", car_path(car) %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
