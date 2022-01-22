@@ -1,0 +1,14 @@
+<div class="container py-5">
+  <div class="row">
+    <div class="col-12 col-md-6 offset-lg-3">
+      <div class="bg-white rounded p-3 shadow">
+        <h3>Réserver la <%= @car.brand %></h3>
+        <%= simple_form_for([@car, @booking]) do |f| %>
+          <%= f.input :start %>
+          <%= f.input :end %>
+          <%= f.submit "Reservé" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
